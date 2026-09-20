@@ -15,7 +15,7 @@ python -m http.server 8770 --bind 127.0.0.1
 
 1. เปลี่ยน `APP_VERSION` ใน `python_desktop/vitx_launcher/version.py`
 2. เปลี่ยน `MyAppVersion` ใน `python_desktop/installer/VITXLauncher.iss`
-3. แก้ `python_desktop/RELEASE_NOTES.md`
+3. แก้ `python_desktop/RELEASE_NOTES.md` สำหรับบันทึกภายใน และใส่เฉพาะข่าวกิจกรรมที่เผยแพร่ได้ใน `python_desktop/PUBLIC_ACTIVITY_NOTES.md`
 4. รัน tests แล้ว build/test EXE ด้วย `python_desktop/build.ps1`
 5. build/test Installer ด้วย `python_desktop/build_installer.ps1`
 6. รัน `release_tools.py package`, `draft` และ `publish` ตามลำดับ
@@ -23,3 +23,5 @@ python -m http.server 8770 --bind 127.0.0.1
 8. คัดลอกไฟล์ในโฟลเดอร์นี้ไปยัง root ของ Public repository `VITXDownload` แล้ว push เข้า `main`
 
 ปุ่มดาวน์โหลดใช้ URL `releases/latest/download/VITXLauncherSetup.exe` จึงชี้ไป Installer ล่าสุดโดยไม่ต้องแก้ลิงก์ทุกเวอร์ชัน
+
+หน้าเว็บไม่ลิงก์ไป Release notes หรือแสดงรายละเอียดภายในของการอัปเดต ข่าวกิจกรรมให้จัดการผ่านคำอธิบายกิจกรรมใน VITX Admin
